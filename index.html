@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pretty About Me</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- Header -->
+    <div class="header">
+      <h1>About Me!</h1>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+	  <a href="http://cis130.net/SP18/dakotah/" target="_blank">Home Page</a>
+      <a href="http://www.visitflorida.com/en-us/cities/destin.html" target="blank">Visit Florida</a>
+      <a href="https://mostateparks.com/park/ha-ha-tonka-state-park" target="blank">Ha-Ha Tonka State Park</a>
+      <a href="https://playoverwatch.com/en-us/game/overview/" target="_blank">Overwatch</a>
+    </div>
+
+    <!-- The flexible grid (content) -->
+    <div class="row">
+      <div class="side">
+          <h2>About Me</h2>
+          <h5>Photo of me:</h5>
+          <img src="me.jpg" style="width: 275px">
+          <p>My name is Dakota Howard. My major is Computer Science. I am planning on graduating from OTC in Spring 2019.
+          </p>
+          <h3>My Classes Taken At OTC:</h3>
+          <ul>
+  					<li>MTH-131: Trigonometry</li>
+            <li>MTH-141: Calculus</li>
+  					<li>CIS-120: Intro to Computer Programming</li>
+            <li>CIS-130: Website Development</li>
+            <li>CIS-150: C# Programming</li>
+            <li>CIS-200: Critical Thinking</li>
+		  </ul>
+      </div>
+      <div class="main">
+          <div class="slideshow-container">
+            <div class="mySlides">
+              <div class="numbertext">1 / 6</div>
+              <img src="thebeach.jpg" style="width:100%">
+              <div class="text">The Beach</div>
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">2 / 6</div>
+              <img src="Destin-Harbor.jpg" style="width:100%">
+              <div class="text">Destin Florida</div>
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">3 / 6</div>
+              <img src="ha-ha-tonka-spring.jpg" style="width:100%">
+              <div class="text">Ha Ha Tonka Spring</div>
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 6</div>
+              <img src="tonka.jpg" style="width:100%">
+              <div class="text">Ha Ha Tonka Spring</div>
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">5 / 6</div>
+              <img src="LN84MPOT3B8A1479837745616.JPG" style="width:100%">
+              <div class="text">Blizzard Entertainment</div>
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">6 / 6</div>
+              <img src="Overwatch.jpg" style="width:100%">
+              <div class="text">Overwatch</div>
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+          </div>
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+          </div>
+          <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+            }
+          </script>
+          <h2>Things About Me</h2>
+          <p>When I'm not at work or in classes, some of my favorite things to do are traveling, hiking, gaming, and spending time with my family.</p>
+          <p>One of my favorite places to travel to is Destin Florida. I typically go every year with my cousin and friends. I have a personal goal to eventually travel outside of the United States and see the world. 
+		     Locally one of my favorite places to travel to and go hiking is at HA-HA Tonka. It is a wonderful place to hike and is absolutely beautiful. It's got some of the clearest turqoise blue waters.
+			 Otherwise, I like to travel to places surrounding Missouri to go hiking. I am looking to one day travel out to Havusu Falls in Arizona and make the 10 mile Hike to the falls.
+			 I am also an avid gamer in any spare time I have. I play competitively on both pc and PS4. One of my favorite games to play is Overwatch. It is a fun way for me to challenge my competitive side.
+          </p>
+          <p>
+			 I am a Computer Science Major at OTC with high hopes of completing this degree, and working either in Web Security or Game Development. I have not fully found my place in this degree yet, but I still have plenty of classes to take.
+			 It's a long road ahead of me, but I am super stoked to have every experience I possibly can! I have linked my home page with all of the work I have completed. I hope you enjoy reading over and looking at my work.
+		  </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <h4>Contact me at: Dakota_Howard@gmail.com  &#169;</h4>
+    </div>
+  </body>
+</html>
